@@ -37,7 +37,7 @@ public class DBStore {
             Statement stmt = connection.createStatement();
             String query = "SELECT do_fetch from " + table + " WHERE " + equipmentIdColumn + " = '" + equipment.getId() + "'";
             ResultSet resultSet = stmt.executeQuery(query);
-            System.out.println("Result set size for query "+query+" is "+resultSet.getFetchSize());
+            System.out.println("Result set size for poll query is "+resultSet.getFetchSize());
             if(resultSet.next()) {
                 pollSuccess = resultSet.getBoolean("do_fetch");
                 System.out.println("Poll result is "+pollSuccess);
