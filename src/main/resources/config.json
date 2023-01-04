@@ -1,0 +1,23 @@
+{
+  "poll" : {
+    "db" : {
+      "driver" : "com.mysql.cj.jdbc.Driver",
+      "url" : "jdbc:mysql://localhost:3306/logever",
+      "user" : "logever",
+      "password" : "logever",
+      "table" : "f_mstr_equipment_lgs",
+      "equipmentIdColumn" : "id"
+    },
+    "interval" : 2
+  },
+  "equipment" : {
+    "id" : 1,
+    "name" : "Weighing Machine",
+    "type" : "",
+    "port" : "cu.Bluetooth-Incoming-Port",
+    "rate" : 9600,
+    "data" : {
+      "transform" : "com.digitedgy.transform.WeighingMachineTransformation"
+    }
+  }
+}
